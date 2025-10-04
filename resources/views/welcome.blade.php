@@ -10,5 +10,9 @@
         <a href="{{ route('saluditos') }}">Saludos</a>
         <br>
         <a href="{{ route('bienvenidos') }}">Bienvenidos</a>
+        <br>
+        <a href="{{ route('ejemplos') }}">Ejemplos</a>
+        <br>
+        <a href="{{ route('estudiantes') }}">Estudiantes</a>
     </body>
 </html>
