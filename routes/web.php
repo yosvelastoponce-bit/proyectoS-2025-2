@@ -12,8 +12,8 @@ Route::get('/greeting', function (){
 
 Route::get('/saludos', function (){
     return "Hola de nuevo";
-});
+})->name('Saludos');
 
 Route::get('/bienvenidos', function (){
     return view("bienvenidos");
-});
+})->name('Bienvenidos');

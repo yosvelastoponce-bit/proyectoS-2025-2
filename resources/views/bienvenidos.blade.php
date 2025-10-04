@@ -1,1 +1,2 @@
-<h1>Poner cualquier cosa</h1>
+<!DOCTYPE html>
+<h1>Hola</h1>
