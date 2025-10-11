@@ -1,0 +1,5 @@
+Estudiantes 
+
+<br>
+
+{{ $estudiantes }}

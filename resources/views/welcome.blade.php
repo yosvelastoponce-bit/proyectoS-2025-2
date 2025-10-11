@@ -13,6 +13,8 @@
         <br>
         <a href="{{ route('ejemplos') }}">Ejemplos</a>
         <br>
-        <a href="{{ route('estudiantes') }}">Estudiantes</a>
+        <a href="{{ route('estudiantes.index') }}">Estudiantes</a>
+        <br>
+        <a href="{{ route('administrador.index') }}">Administrador</a>
     </body>
 </html>

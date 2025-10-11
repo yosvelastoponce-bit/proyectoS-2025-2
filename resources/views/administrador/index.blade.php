@@ -1,0 +1,5 @@
+hola
+
+<br>
+
+{{ $administrador }}

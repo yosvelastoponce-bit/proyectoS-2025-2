@@ -3,19 +3,19 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
 use App\Models\Estudiante;
-
+use App\Models\Administrador;
+use App\Http\Controllers\Estudiantes\EstudiantesContoller;
+use App\Http\Controllers\Administrador\AdministradorController;
 
 Route::get('/', function () {
 
-    $estudiante=new Estudiante();
-    $estudiante->nombre="Luiz";
-    $estudiante->pri_ape="Lopez";
-    $estudiante->seg_ape="Perez";
-    $estudiante->save();
+   /*$administrador=new Administrador();
+    $administrador->nombre="Luiz";
+    $administrador->save();
 
-    return $estudiante;
+    return $administrador;*/
     //return 'Aqui trabajare con la tabla estudiantes';
-    //return view('welcome');
+    return view('welcome');
 });
 
 Route::get('/greeting', function (){
@@ -34,6 +34,12 @@ Route::get('/ejemplo', function (){
     return view("ejemplo1");
 })->name('ejemplos');
 
+/*
 Route::get('/estudiantes', function (){
     return View::make("estudiantes");
 })->name('estudiantes');
+*/
+
+Route::get('/estudiantes/index', [EstudiantesContoller::class, 'index'])->name('estudiantes.index');
+
+Route::get('/administrador/index', [AdministradorController::class, 'index'])->name('administrador.index');
