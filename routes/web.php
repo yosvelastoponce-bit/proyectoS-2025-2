@@ -8,12 +8,16 @@ use App\Http\Controllers\Estudiantes\EstudiantesContoller;
 use App\Http\Controllers\Administrador\AdministradorController;
 
 Route::get('/', function () {
+/*
+    $estudiante=new Estudiante();
+    $estudiante->codigo="PANRG";
+    $estudiante->nombre="Yosvel";
+    $estudiante->pri_ape="Asto";
+    $estudiante->seg_ape="Ponce";
+    $estudiante->dni="645123";
+    $estudiante->save();
 
-   /*$administrador=new Administrador();
-    $administrador->nombre="Luiz";
-    $administrador->save();
-
-    return $administrador;*/
+    return $estudiante;*/
     //return 'Aqui trabajare con la tabla estudiantes';
     return view('welcome');
 });
@@ -41,5 +45,6 @@ Route::get('/estudiantes', function (){
 */
 
 Route::get('/estudiantes/index', [EstudiantesContoller::class, 'index'])->name('estudiantes.index');
+Route::get('/estudiantes/console', [EstudiantesContoller::class, 'console'])->name('estudiantes.console');
 
 Route::get('/administrador/index', [AdministradorController::class, 'index'])->name('administrador.index');

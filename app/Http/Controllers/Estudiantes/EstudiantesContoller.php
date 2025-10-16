@@ -9,7 +9,14 @@ class EstudiantesContoller extends Controller
 {
     public function index(Request $request){
     
-        $estudiantes=Estudiante::get();
+        $estudiantes = Estudiante::get();
+
         return view('estudiantes.index', compact('estudiantes'));
+
+
+    }
+
+    public function create(){
+        return view('estudiantes.create');
     }
 }
