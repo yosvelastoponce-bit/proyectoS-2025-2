@@ -21,7 +21,14 @@
       Estudiantes
 
     </h1>
-    
+    <td class="py-2 px-4 border-b border-gray-300">
+
+                <a href="{{ route('estudiantes.create') }}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                  Formulario
+                 </a>
+
+              </td>
+    <form>
 
     <div class="relative flex flex-col w-full h-full overflow-scroll text-gray-700 bg-white shadow-md rounded-xl bg-clip-border">
 

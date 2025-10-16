@@ -45,6 +45,8 @@ Route::get('/estudiantes', function (){
 */
 
 Route::get('/estudiantes/index', [EstudiantesContoller::class, 'index'])->name('estudiantes.index');
-Route::get('/estudiantes/console', [EstudiantesContoller::class, 'console'])->name('estudiantes.console');
+Route::get('/estudiantes/create', [EstudiantesContoller::class, 'create'])->name('estudiantes.create');
+Route::post('/estudiantes/store', [EstudiantesContoller::class, 'store'])->name('estudiantes.store');
+Route::get('/estudiantes/edit', [EstudiantesContoller::class, 'store'])->name('estudiantes.store');
 
 Route::get('/administrador/index', [AdministradorController::class, 'index'])->name('administrador.index');

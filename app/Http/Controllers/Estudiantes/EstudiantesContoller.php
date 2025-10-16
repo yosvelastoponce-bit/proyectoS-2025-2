@@ -4,12 +4,13 @@ namespace App\Http\Controllers\Estudiantes;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\{redirect, View};
 use App\Models\Estudiante;
 class EstudiantesContoller extends Controller
 {
     public function index(Request $request){
     
-        $estudiantes = Estudiante::get();
+        $estudiantes = Estudiante::orderBy('id', "DESC")->get();
 
         return view('estudiantes.index', compact('estudiantes'));
 
@@ -17,6 +18,17 @@ class EstudiantesContoller extends Controller
     }
 
     public function create(){
-        return view('estudiantes.create');
+        return View::make('estudiantes.create');
+    }
+
+    public function store(Request $request){
+        $estudiante=Estudiante::create($request->all());
+        return Redirect::to('/estudiantes/index');
+    }
+
+    public function edit($id){
+        $estudiante=Estudiante::find($id);
+
+        return $estudiante;
     }
 }

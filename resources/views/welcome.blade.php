@@ -16,5 +16,6 @@
         <a href="{{ route('estudiantes.index') }}">Estudiantes</a>
         <br>
         <a href="{{ route('administrador.index') }}">Administrador</a>
+        <br>
     </body>
 </html>
